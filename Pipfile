@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+appnope = "==0.1.0"
+backcall = "==0.2.0"
+certifi = "==2020.6.20"
+click = "==7.1.2"
+decorator = "==4.4.2"
+dj-database-url = "==0.5.0"
+django = "==2.2"
+djangorestframework = "==3.8.2"
+gunicorn = "==20.0.4"
+ipython = "*"
+psycopg2-binary = "*"
+pandas = "*"
+scikit-learn = "*"
+python-dotenv = "*"
+
+[requires]
+python_version = "3.8"
