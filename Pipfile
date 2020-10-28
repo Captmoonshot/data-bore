@@ -20,6 +20,8 @@ psycopg2-binary = "*"
 pandas = "*"
 scikit-learn = "*"
 python-dotenv = "*"
+boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.8"
