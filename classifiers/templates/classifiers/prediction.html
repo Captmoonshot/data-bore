@@ -4,8 +4,20 @@
 <div>
 <h1>Movie Review Sentiment Classifier:</h1>
 <p></p>
-<h2>Your review was {{ result }} with {{ probability }}% probability.</h2>
+<h2>Your review was <strong>{{ result }}</strong> with {{ probability }}% probability.</h2>
 </div>
+<br/>
+
+<div id="button">
+	<form action="thanks" method="post">{% csrf_token %}
+		<input class="btn btn-success" type="submit" value="Correct" name="feedback_button">
+		<input class="btn btn-warning" type="submit" value="Incorrect" name="feedback_button">
+		<input type="hidden" value="{{ result }}" name="result">
+		<input type="hidden" value="{{ review }}" name="review">
+	</form>
+</div>
+<br/>
+
 <div>
 <p></p>
 <h3>Your Movie Review:</h3>
