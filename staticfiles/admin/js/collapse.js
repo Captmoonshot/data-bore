@@ -30,26 +30,23 @@
                 h2.appendChild(document.createTextNode(')'));
             }
         }
-        // Add toggle to hide/show anchor tag
+        // Add toggle to anchor tag
+        var toggles = document.querySelectorAll('fieldset.collapse a.collapse-toggle');
         var toggleFunc = function(ev) {
-            if (ev.target.matches('.collapse-toggle')) {
-                ev.preventDefault();
-                ev.stopPropagation();
-                var fieldset = closestElem(ev.target, 'fieldset');
-                if (fieldset.classList.contains('collapsed')) {
-                    // Show
-                    ev.target.textContent = gettext('Hide');
-                    fieldset.classList.remove('collapsed');
-                } else {
-                    // Hide
-                    ev.target.textContent = gettext('Show');
-                    fieldset.classList.add('collapsed');
-                }
+            ev.preventDefault();
+            var fieldset = closestElem(this, 'fieldset');
+            if (fieldset.classList.contains('collapsed')) {
+                // Show
+                this.textContent = gettext('Hide');
+                fieldset.classList.remove('collapsed');
+            } else {
+                // Hide
+                this.textContent = gettext('Show');
+                fieldset.classList.add('collapsed');
             }
         };
-        var inlineDivs = document.querySelectorAll('fieldset.module');
-        for (i = 0; i < inlineDivs.length; i++) {
-            inlineDivs[i].addEventListener('click', toggleFunc);
+        for (i = 0; i < toggles.length; i++) {
+            toggles[i].addEventListener('click', toggleFunc);
         }
     });
 })();
