@@ -7,6 +7,7 @@ class Movie(models.Model):
 		return f"{self.title}"
 
 class Sentiment(models.Model):
+	movie = models.ForeignKey(Movie, null=True, blank=True, on_delete=models.SET_NULL)
 	reviews = models.TextField()
 	results = models.CharField(max_length=12, null=True, blank=True)
 	probabilities = models.FloatField(null=True)

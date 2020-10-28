@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import home
+from .views import classify_review
 
 urlpatterns = [
-	path('', home, name='home'),
+	path('', classify_review, name='classify_review'),
 ]

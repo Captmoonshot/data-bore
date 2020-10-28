@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+<h1>Movie Review Sentiment Classifier:</h1>
+<p></p>
+<h2>Your review was {{ result }} with {{ probability }}% probability.</h2>
+</div>
+<div>
+<p></p>
+<h3>Your Movie Review:</h3>
+<p>{{ review }}</p>
+
+<h3><a class="btn btn-success btn-lg" href="{% url 'classify_review' %}" role="button">Review Another Movie</a></h3>
+
+<p></p>
+</div>
+{% endblock %}
