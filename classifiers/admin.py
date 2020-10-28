@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Sentiment
+from .models import Sentiment, Movie
 
 
 class SentimentAdmin(admin.ModelAdmin):
@@ -16,5 +16,8 @@ class SentimentAdmin(admin.ModelAdmin):
 	]
 
 admin.site.register(Sentiment, SentimentAdmin)
+
+admin.site.register(Movie)
+
 
 
