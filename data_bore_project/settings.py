@@ -152,7 +152,7 @@ MEDIA_ROOT = "mediafiles"
 
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', 'you-will-never-know')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', 'you-will-never-know')
-AWS_STORAGE_BUCKET_NAME = 'data-bore'
+AWS_STORAGE_BUCKET_NAME = 'data-bore-2'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
