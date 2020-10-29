@@ -13,6 +13,9 @@ class SentimentForm(forms.ModelForm):
 		}
 		fields = [
 			"reviews",
+			"gender",
+			"age",
+			"country",
 		]
 
 	def __init__(self, *args, **kwargs):

@@ -8,16 +8,27 @@ class SentimentAdmin(admin.ModelAdmin):
 		model = Sentiment
 	list_display = [
 		"id",
+		"movie",
 		"reviews",
 		"results",
-		"probabilities",
+		'gender',
+		'age',
+		'country',
 		"timestamp",
 		"updated",
 	]
 
 admin.site.register(Sentiment, SentimentAdmin)
 
-admin.site.register(Movie)
+class MovieAdmin(admin.ModelAdmin):
+	class Meta:
+		model = Movie
+	list_display = [
+		"id",
+		"title",
+	]
+
+admin.site.register(Movie, MovieAdmin)
 
 
 
