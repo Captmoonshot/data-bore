@@ -28,3 +28,13 @@ class Sentiment(models.Model):
 	timestamp 	= models.DateField(auto_now_add=True)
 	updated 	= models.DateField(auto_now=True)
 
+	class Meta:
+		ordering = ['-timestamp', '-updated']
+
+
+
+
+
+
+
+
