@@ -24,6 +24,7 @@ python-dotenv = "*"
 boto3 = "*"
 django-storages = "*"
 whitenoise = "*"
+django-cors-headers = "==2.2.0"
 
 [requires]
 python_version = "3.8"
