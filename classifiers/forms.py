@@ -21,7 +21,7 @@ class SentimentForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
 		super(SentimentForm, self).__init__(*args, **kwargs)
 		self.fields["movie"] = forms.ModelChoiceField(queryset=Movie.objects.all())
-		self.fields["movie"].required = False
+		self.fields["movie"].required = True
 
 
 

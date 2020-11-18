@@ -19,12 +19,12 @@ class Sentiment(models.Model):
 		('Japan', 'Japan'),
 		('South Korea', 'South Korea'),
 	)
-	movie 		= models.ForeignKey(Movie, null=True, blank=True, on_delete=models.SET_NULL)
-	reviews 	= models.TextField(null=True, blank=True)
-	results 	= models.IntegerField(null=True, blank=True)
-	gender 		= models.CharField(null=True, blank=True, max_length=6, choices=GENDER_CHOICES)
-	age 		= models.IntegerField(null=True, blank=True)
-	country		= models.CharField(null=True, blank=True, max_length=24, choices=COUNTRY_CHOICES)
+	movie 		= models.ForeignKey(Movie, on_delete=models.CASCADE)
+	reviews 	= models.TextField()
+	results 	= models.IntegerField()
+	gender 		= models.CharField(max_length=6, choices=GENDER_CHOICES)
+	age 		= models.IntegerField()
+	country		= models.CharField(max_length=24, choices=COUNTRY_CHOICES)
 	timestamp 	= models.DateField(auto_now_add=True)
 	updated 	= models.DateField(auto_now=True)
 
